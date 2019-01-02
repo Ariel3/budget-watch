@@ -23,13 +23,39 @@
                   android:layout_width="fill_parent"
                   android:layout_height="fill_parent"
                   app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <TextView
+
+        <LinearLayout android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <Button
+                android:id="@+id/button_last_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                android:drawableLeft="@drawable/ic_arrow_back_white"
+                android:drawableStart="@drawable/ic_arrow_back_white" />
+
+            <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:textSize="20sp"
             android:id="@+id/dateRange"
             android:layout_gravity="center"/>
+
+            <Button
+                android:id="@+id/button_next_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="@color/white"
+                android:drawableRight="@drawable/ic_arrow_forward_white"
+                android:drawableEnd="@drawable/ic_arrow_forward_white" />
+
+        </LinearLayout>
 
         <include layout="@layout/list_layout" />
 

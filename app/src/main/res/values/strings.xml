@@ -113,6 +113,8 @@
     <string name="settings">Settings</string>
     <string name="receiptQuality">Receipt Quality</string>
     <string name="receiptQualitySummary">Select the JPEG quality used when capturing receipt images</string>
+    <string name="dayStart">First day in Month</string>
+    <string name="dayStartSummary">Select the first day in the month that the budget will start</string>
     <string name="encodingReceipt">Encoding receipt</string>
 
     <string name="deleteBudgetTitle">Remove Budget</string>

@@ -2,16 +2,18 @@ package protect.budgetwatch;
 
 import java.util.Calendar;
 
+import static protect.budgetwatch.DBHelper.Setting.FIRST_DAY_IN_ROUND;
+
 class CalendarUtil
 {
-    static int moveDate = 0;
+    static int moveMonth = 0;
 
     public static long getStartOfMonthMs(int year, int month) {
         final Calendar date = Calendar.getInstance();
 
         date.set(Calendar.YEAR, year);
-        date.set(Calendar.MONTH, month + moveDate);
-        date.set(Calendar.DAY_OF_MONTH, date.getActualMinimum(Calendar.DAY_OF_MONTH));
+        date.set(Calendar.MONTH, month + moveMonth);
+        date.set(Calendar.DAY_OF_MONTH, FIRST_DAY_IN_ROUND);
         date.set(Calendar.HOUR_OF_DAY, date.getActualMinimum(Calendar.HOUR_OF_DAY));
         date.set(Calendar.MINUTE, date.getActualMinimum(Calendar.MINUTE));
         date.set(Calendar.SECOND, date.getActualMinimum(Calendar.SECOND));
@@ -23,8 +25,8 @@ class CalendarUtil
         final Calendar date = Calendar.getInstance();
 
         date.set(Calendar.YEAR, year);
-        date.set(Calendar.MONTH, month + moveDate);
-        date.set(Calendar.DAY_OF_MONTH, date.getActualMaximum(Calendar.DAY_OF_MONTH));
+        date.set(Calendar.MONTH, month + moveMonth);
+        date.set(Calendar.DAY_OF_MONTH, FIRST_DAY_IN_ROUND);
         date.set(Calendar.HOUR_OF_DAY, date.getActualMaximum(Calendar.HOUR_OF_DAY));
         date.set(Calendar.MINUTE, date.getActualMaximum(Calendar.MINUTE));
         date.set(Calendar.SECOND, date.getActualMaximum(Calendar.SECOND));
@@ -38,7 +40,7 @@ class CalendarUtil
 
         date.set(Calendar.YEAR, year);
         date.set(Calendar.MONTH, month);
-        date.set(Calendar.DAY_OF_MONTH, day);
+        date.set(Calendar.DAY_OF_MONTH, FIRST_DAY_IN_ROUND);
         date.set(Calendar.HOUR_OF_DAY, date.getActualMinimum(Calendar.HOUR_OF_DAY));
         date.set(Calendar.MINUTE, date.getActualMinimum(Calendar.MINUTE));
         date.set(Calendar.SECOND, date.getActualMinimum(Calendar.SECOND));
@@ -52,7 +54,7 @@ class CalendarUtil
 
         date.set(Calendar.YEAR, year);
         date.set(Calendar.MONTH, month);
-        date.set(Calendar.DAY_OF_MONTH, day);
+        date.set(Calendar.DAY_OF_MONTH, FIRST_DAY_IN_ROUND);
         date.set(Calendar.HOUR_OF_DAY, date.getActualMaximum(Calendar.HOUR_OF_DAY));
         date.set(Calendar.MINUTE, date.getActualMaximum(Calendar.MINUTE));
         date.set(Calendar.SECOND, date.getActualMaximum(Calendar.SECOND));

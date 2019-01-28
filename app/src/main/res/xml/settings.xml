@@ -6,4 +6,11 @@
                         android:defaultValue="40"
                         android:entries="@array/jpegQualityArray"
                         android:entryValues="@array/jpegQualityArray" />
+
+    <ListPreference     android:title="@string/firstDayInRound"
+                        android:summary="@string/dayStartSummary"
+                        android:key="firstDayInMonth"
+                        android:defaultValue="1"
+                        android:entries="@array/firstDayInRound"
+                        android:entryValues="@array/firstDayInRound" />
 </PreferenceScreen>
